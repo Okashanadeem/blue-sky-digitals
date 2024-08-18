@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -8,11 +9,11 @@ const Navbar = () => {
   };
 
   return (
-    <nav className="bg-gray-800 p-4 fixed w-full z-10 top-0">
+    <nav className="bg-gray-800 p-2 fixed w-full z-10 top-0">
       <div className="container mx-auto flex justify-between items-center">
-        <div className="text-white text-lg font-bold">Digital Dream Scape</div>
-
-        {/* Desktop Menu */}
+        <a href="#" className="flex items-center">
+          <img src={logo} alt="Logo" className="w-32 h-auto logo transition-transform duration-300 ease-in-out" />
+        </a>
         <div className="hidden md:flex space-x-4 items-center">
           <a href="#services" className="text-gray-300 hover:text-white">
             Services
@@ -28,13 +29,11 @@ const Navbar = () => {
           </button>
         </div>
 
-        {/* Mobile Menu Button */}
         <button onClick={toggleMenu} className="text-gray-300 hover:text-white focus:outline-none md:hidden">
           <i className="fas fa-bars"></i>
         </button>
       </div>
 
-      {/* Mobile Menu Links */}
       <div className={`md:hidden ${isMenuOpen ? 'block' : 'hidden'}`}>
         <div className="flex flex-col items-center bg-gray-800 text-white p-4">
           <a href="#services" className="py-2 text-gray-300 hover:text-white">
