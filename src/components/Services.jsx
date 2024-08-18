@@ -17,18 +17,20 @@ const Services = () => {
   };
 
   return (
-    <section id="services" className="p-8">
-      <h2 className="text-2xl font-bold mb-4">Our Services</h2>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-4">
-        {services.map((service, index) => (
-          <div
-            key={index}
-            className="bg-blue-500 text-white p-4 rounded hover:bg-blue-700 cursor-pointer"
-            onClick={handleServiceClick}
-          >
-            {service.name}
-          </div>
-        ))}
+    <section id="services" className="p-8 bg-white">
+      <div className="container mx-auto">
+        <h2 className="text-2xl font-bold mb-4">Our Services</h2>
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4">
+          {services.map((service, index) => (
+            <div
+              key={index}
+              className="bg-blue-500 text-white p-4 rounded hover:bg-blue-700 cursor-pointer"
+              onClick={handleServiceClick}
+            >
+              {service.name}
+            </div>
+          ))}
+        </div>
       </div>
     </section>
   );
