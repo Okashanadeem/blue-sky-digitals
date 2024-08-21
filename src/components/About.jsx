@@ -4,14 +4,15 @@ import CountUp from './CountUp.jsx';
 
 const About = () => {
   return (
-    <section
-      id="about"
-      className="relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 bg-cover bg-center bg-no-repeat text-white"
-      style={{
-        backgroundImage: `url(${backgroundImage})`,
-        animation: 'danceBg 60s ease-in-out infinite'
-      }}
-    >
+<section
+  id="about"
+  className="relative p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 bg-cover bg-center bg-no-repeat text-white mb-0 border-black"
+  style={{
+    backgroundImage: `url(${backgroundImage})`,
+    animation: 'danceBg 60s ease-in-out infinite',
+  }}
+>
+
       <div className="absolute inset-0 bg-black opacity-70"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-4">
 
