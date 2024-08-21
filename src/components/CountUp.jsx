@@ -1,7 +1,6 @@
-
 import React, { useState, useEffect } from 'react';
 
-const CountUp = ({ endValue, duration = 2000, prefix = '' }) => {
+const CountUp = ({ endValue, duration = 2000, prefix = '', style = {} }) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -20,7 +19,7 @@ const CountUp = ({ endValue, duration = 2000, prefix = '' }) => {
   }, [endValue, duration]);
 
   return (
-    <div className="count-up text-6xl font-bold text-gray-800">
+    <div className="count-up" style={style}>
       <span className="count-value">{prefix}{count}</span>
     </div>
   );
