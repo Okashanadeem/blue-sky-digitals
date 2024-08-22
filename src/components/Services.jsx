@@ -5,13 +5,15 @@ import WebDev from '../assets/images/WebDev.avif';
 import Graphicdesign from '../assets/images/Graphicdesign.png';
 import SocialMediaMarketing from '../assets/images/SocialMediaMarketing.jpeg';
 import VideoEditing from '../assets/images/VideoEditing.png';
+import UiUxPortfolio from '../assets/images/UiUxPortfolio.avif';
 
 const services = [
   { name: "Google Ads & Facebook Ads", image: googleAdsImage },
   { name: "Web Development", image: WebDev },
   { name: "Graphic Designing", image: Graphicdesign },
   { name: "Social Media Marketing", image: SocialMediaMarketing },
-  { name: "Video Editing", image: VideoEditing }
+  { name: "Video Editing", image: VideoEditing },
+  { name: "UI/UX Designing", image: UiUxPortfolio }
 ];
 
 const Services = () => {
