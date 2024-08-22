@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import Logo from '../assets/images/Logo.png';
+import logo from '../assets/images/logo.png';
 
 const Navbar = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -14,7 +14,7 @@ const Navbar = () => {
         
         {/* Logo */}
         <div className="flex items-center">
-          <img src={Logo} alt="Logo" className="h-12 w-auto" />
+          <img src={logo} alt="Logo" className="h-12 w-auto" />
         </div>
 
         {/* Desktop Menu */}
