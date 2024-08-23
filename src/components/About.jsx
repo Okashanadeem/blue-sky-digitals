@@ -3,6 +3,8 @@ import backgroundImage from '../assets/images/AboutBG.jpg';
 import CountUp from './CountUp.jsx';
 
 const About = () => {
+  const text = "We provide exceptional services with a dedicated team of experts committed to delivering quality, efficiency, and creativity in every project.";
+
   return (
     <section
       id="about"
@@ -14,8 +16,12 @@ const About = () => {
     >
       <div className="absolute inset-0 bg-black opacity-70"></div>
       <div className="relative z-10 max-w-7xl mx-auto px-2 sm:px-4 lg:px-8">
-        <h2 className="mt-8 sm:mt-10 md:mt-12 lg:mt-16 xl:mt-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 sm:mb-8 lg:mb-12 xl:mb-16 uppercase tracking-wide leading-tight animate__animated animate__fadeInDown text-left sm:text-center">
-          Transforming <br /> Ideas into <br /><span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">Digital Realities</span>
+        
+        <h2 className="mt-8 sm:mt-10 md:mt-12 lg:mt-16 xl:mt-20 text-3xl sm:text-4xl md:text-5xl lg:text-6xl xl:text-7xl font-extrabold mb-6 sm:mb-8 lg:mb-12 xl:mb-16 uppercase tracking-wide leading-tight animate__animated animate__fadeInDown text-center lg:text-left lg:pl-10">
+          Transforming <br /> Ideas into <br />
+          <span className="text-transparent bg-clip-text bg-gradient-to-r from-blue-400 to-purple-600">
+            Digital Realities
+          </span>
         </h2>
 
         <div className="flex justify-center lg:justify-end group">
@@ -47,7 +53,7 @@ const About = () => {
 
         <div
           className="bg-gradient-to-r from-gray-900 via-black to-gray-900 p-6 sm:p-8 md:p-12 lg:p-16 xl:p-20 rounded-lg shadow-2xl transition-shadow duration-500 ease-in-out"
-          style={{ height: 'auto' }} // Height will auto-adjust based on content
+          style={{ height: 'auto' }}
         >
           <div className="flex flex-col md:flex-row justify-center items-center">
             <div className="w-full md:w-1/2 mb-6 md:mb-0">
@@ -85,7 +91,14 @@ const About = () => {
           </h3>
 
           <p className="text-base sm:text-lg md:text-xl lg:text-2xl xl:text-3xl max-w-3xl mx-auto leading-relaxed text-justify">
-            We provide exceptional services with a dedicated team of experts committed to delivering quality, efficiency, and creativity in every project.
+            {text.split(' ').map((word, index) => (
+              <span
+                key={index}
+                className="inline-block transform transition-transform duration-300 ease-in-out hover:translate-y-[-5px] "
+              >
+                {word}&nbsp;
+              </span>
+            ))}
           </p>
         </div>
 
