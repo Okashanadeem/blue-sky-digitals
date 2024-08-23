@@ -19,8 +19,8 @@ const CountUp = ({ endValue, duration = 2000, prefix = '' }) => {
   }, [endValue, duration]);
 
   return (
-    <div className="count-up" style={{ color: 'white', fontSize: '2.5rem', fontWeight: 'bold' }}>
-      <span className="count-value">{prefix}{count}</span>
+    <div className="count-up">
+      <span className="count-value" style={{ color: 'white' }}>{prefix}{count}</span>
     </div>
   );
 };
