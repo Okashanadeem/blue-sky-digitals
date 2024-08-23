@@ -10,6 +10,9 @@ const Contact = () => {
     message: ''
   });
 
+  const [showAlert, setShowAlert] = useState(false);  // Modal visibility state
+  const [alertMessage, setAlertMessage] = useState('');  // Alert message
+
   const handleChange = (e) => {
     setFormData({
       ...formData,
@@ -20,7 +23,6 @@ const Contact = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-
     emailjs.send(
       'service_cvu8z5k',
       'template_408h2pq',
@@ -28,12 +30,13 @@ const Contact = () => {
       'TrKHUsB1PmZCeWoYx'
     ).then((result) => {
       console.log(result.text);
-      alert("Message Sent Successfully!");
+      setAlertMessage("Message Sent Successfully! We will contact you soon.");
+      setShowAlert(true);
     }, (error) => {
       console.log(error.text);
-      alert("Failed to Send Message.");
+      setAlertMessage("Failed to Send Message. Please try again.");
+      setShowAlert(true);
     });
-
 
     setFormData({
       name: '',
@@ -42,6 +45,10 @@ const Contact = () => {
       service: '',
       message: ''
     });
+  };
+
+  const closeAlert = () => {
+    setShowAlert(false);
   };
 
   return (
@@ -100,6 +107,7 @@ const Contact = () => {
                 <option value="Video Editing">Video Editing</option>
                 <option value="Search Engine Optimization">SEO</option>
                 <option value="Digital Marketing">Digital Marketing</option>
+                <option value="UI/UX Designing">UI/UX Designing</option>
               </select>
 
               {/* Custom Arrow Icon */}
@@ -113,7 +121,7 @@ const Contact = () => {
 
           <textarea
             name="message"
-            placeholder="Define your Project"
+            placeholder="Define Your Project Details..."
             value={formData.message}
             onChange={handleChange}
             className="relative p-4 border border-gray-600 rounded-lg w-full bg-gray-100 text-gray-900 placeholder-gray-500 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:border-blue-500 shadow-lg transition-transform duration-300 ease-in-out transform hover:scale-105 hover:bg-gray-200 resize-none scrollbar-thin scrollbar-thumb-gray-400 scrollbar-track-gray-200"
@@ -129,6 +137,21 @@ const Contact = () => {
           </button>
         </form>
       </div>
+
+      {/* Modal Alert */}
+      {showAlert && (
+        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
+          <div className="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
+            <h3 className="text-lg font-semibold text-gray-900 mb-4">{alertMessage}</h3>
+            <button
+              onClick={closeAlert}
+              className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md transition-colors duration-300"
+            >
+              Close
+            </button>
+          </div>
+        </div>
+      )}
     </section>
   );
 };

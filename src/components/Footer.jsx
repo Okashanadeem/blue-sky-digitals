@@ -1,5 +1,5 @@
 import React from 'react';
-import { FaFacebookF, FaInstagram, FaYoutube, FaGithub } from 'react-icons/fa';
+import { FaFacebookF, FaInstagram, FaGithub, FaWhatsapp } from 'react-icons/fa';
 import { Link } from 'react-router-dom';
 import logo from '../assets/images/logo.png';
 
@@ -52,12 +52,12 @@ const Footer = () => {
             <FaInstagram className="w-6 h-6" />
           </a>
           <a
-            href="https://youtube.com"
-            className="text-gray-400 hover:text-red-500 transition-colors duration-300"
+            href="https://wa.me/+923343677490"
+            className="text-gray-400 hover:text-green-500 transition-colors duration-300"
             target="_blank"
             rel="noopener noreferrer"
           >
-            <FaYoutube className="w-6 h-6" />
+            <FaWhatsapp className="w-6 h-6" />
           </a>
         </div>
       </div>
