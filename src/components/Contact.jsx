@@ -140,17 +140,21 @@ const Contact = () => {
 
       {/* Modal Alert */}
       {showAlert && (
-        <div className="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50">
-          <div className="bg-white p-6 rounded-lg shadow-lg w-80 text-center">
-            <h3 className="text-lg font-semibold text-gray-900 mb-4">{alertMessage}</h3>
-            <button
-              onClick={closeAlert}
-              className="bg-blue-600 hover:bg-blue-700 text-white py-2 px-4 rounded-lg shadow-md transition-colors duration-300"
-            >
-              Close
-            </button>
+        <>
+          {/* Background Blur */}
+          <div className="fixed inset-0 bg-black bg-opacity-60 backdrop-blur-sm z-40"></div>
+          <div className="fixed inset-0 flex items-center justify-center z-50">
+            <div className="bg-gradient-to-r from-blue-500 via-purple-600 to-indigo-700 p-6 rounded-lg shadow-lg w-80 text-center">
+              <h3 className="text-lg font-semibold text-white mb-4">{alertMessage}</h3>
+              <button
+                onClick={closeAlert}
+                className="bg-white hover:bg-gray-100 text-gray-900 py-2 px-4 rounded-lg shadow-md transition-colors duration-300"
+              >
+                Close
+              </button>
+            </div>
           </div>
-        </div>
+        </>
       )}
     </section>
   );

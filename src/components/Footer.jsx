@@ -27,9 +27,9 @@ const Footer = () => {
         </div>
 
         {/* Copyright */}
-        <div className="text-center mt-4 md:mt-0">
+        <div className="text-center mt-4 md:mt-0 md:text-left md:pr-20">
           <span className="text-gray-500">
-            All rights reserved &copy; 2024
+            Feel Free to Contact with Us!
           </span>
         </div>
 
@@ -64,6 +64,13 @@ const Footer = () => {
 
       {/* Horizontal Line */}
       <hr className="my-6 border-gray-700" />
+      
+      {/* Footer Bottom */}
+      <div className="text-center mt-4">
+        <span className="text-gray-500">
+          All rights reserved &copy; 2024
+        </span>
+      </div>
     </footer>
   );
 };

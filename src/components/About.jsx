@@ -32,7 +32,7 @@ const About = () => {
           </div>
         </div>
 
-        <div className="flex justify-center lg:justify-start mt-8 mb-10">
+        <div className="flex justify-center lg:justify-start  mb-20">
           <a
             href="#contact"
             className="inline-block px-8 py-4 bg-gradient-to-r from-purple-500 via-blue-600 to-indigo-600 text-white font-semibold text-sm md:text-lg rounded-full shadow-lg transform transition-all duration-500 ease-in-out hover:scale-110 hover:bg-gradient-to-l hover:from-blue-700 hover:to-purple-700 hover:shadow-2xl focus:outline-none focus:ring-4 focus:ring-blue-300 relative overflow-hidden group"
