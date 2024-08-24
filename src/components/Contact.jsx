@@ -24,13 +24,13 @@ const Contact = () => {
     e.preventDefault();
 
     emailjs.send(
-      'service_cvu8z5k',
-      'template_408h2pq',
+      'service_dacfsqa',
+      'template_k90nidz',
       formData,
-      'TrKHUsB1PmZCeWoYx'
+      'ng6C83lkNQjEXon4e'
     ).then((result) => {
       console.log(result.text);
-      setAlertMessage("Message Sent Successfully! We will contact you soon.");
+      setAlertMessage("Thanks for contacting us! We will contact you soon");
       setShowAlert(true);
     }, (error) => {
       console.log(error.text);
